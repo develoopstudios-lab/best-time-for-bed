@@ -1,0 +1,9 @@
+{
+  "name": "best-time-for-bed",
+  "version": "1.0.0",
+  "description": "Free sleep calculator to find the best time to go to bed or wake up using 90-minute sleep cycles.",
+  "main": "sleep-calculator.js",
+  "keywords": ["sleep-calculator", "bedtime-calculator", "sleep-cycle", "wake-up-time", "health"],
+  "homepage": "https://www.besttimeforbed.com/",
+  "license": "MIT"
+}

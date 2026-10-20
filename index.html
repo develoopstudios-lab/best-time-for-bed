@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Best Time for Bed - Sleep Calculator Demo</title>
+  <style>
+    body { font-family: system-ui, sans-serif; max-width: 480px; margin: 40px auto; padding: 0 16px; color: #1c2541; }
+    label { display: block; margin: 16px 0 6px; font-weight: 600; }
+    input, button { font-size: 1rem; padding: 8px 12px; }
+    ul { padding-left: 20px; }
+    a { color: #3a506b; }
+  </style>
+</head>
+<body>
+  <h1>Best Time for Bed</h1>
+  <p>Simple demo of the sleep calculator. Full version: <a href="https://www.besttimeforbed.com/">besttimeforbed.com</a></p>
+
+  <label for="wake">I need to wake up at:</label>
+  <input id="wake" type="time" value="07:00">
+  <button id="calc-bed">Find bedtimes</button>
+
+  <label for="bed">I am going to bed at:</label>
+  <input id="bed" type="time" value="23:00">
+  <button id="calc-wake">Find wake-up times</button>
+
+  <ul id="results"></ul>
+
+  <script src="sleep-calculator.js"></script>
+  <script>
+    var results = document.getElementById("results");
+    function show(items) {
+      results.innerHTML = items.map(function (i) {
+        return "<li><strong>" + i.time + "</strong> (" + i.cycles + " cycles, " + i.hoursOfSleep + " hours of sleep)</li>";
+      }).join("");
+    }
+    document.getElementById("calc-bed").onclick = function () {
+      show(SleepCalculator.bedtimesForWakeUp(document.getElementById("wake").value));
+    };
+    document.getElementById("calc-wake").onclick = function () {
+      show(SleepCalculator.wakeTimesForBedtime(document.getElementById("bed").value));
+    };
+  </script>
+</body>
+</html>
