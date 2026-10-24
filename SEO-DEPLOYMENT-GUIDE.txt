@@ -1,0 +1,49 @@
+DEVELOOP STUDIOS — SEO DEPLOYMENT GUIDE
+=========================================
+
+A. BEFORE YOU PUBLISH
+[ ] Choose a domain that you own and can renew.
+[ ] Enable HTTPS/SSL on your hosting.
+[ ] Replace every https://YOUR-DOMAIN.com in index.html with your final canonical domain.
+[ ] Replace YOUR-DOMAIN.com in robots.txt and sitemap.xml with the same domain.
+[ ] Add a real social preview image at /assets/develoop-studios-social.jpg (1200x630 recommended) or update/remove the image metadata until it exists.
+[ ] Check business name, phone numbers, service descriptions and experience claims.
+[ ] If you have a real business email, replace the placeholder email in the Organization JSON-LD and add it visibly to the page if you want customers to use it.
+[ ] Add a privacy notice if you later add analytics, advertising pixels, contact forms, or collect personal information.
+[ ] Test the page on phone and desktop; confirm both WhatsApp links work.
+
+B. UPLOAD
+1. Upload index.html, robots.txt, sitemap.xml to the website root (commonly public_html).
+2. Confirm these URLs load without login:
+   https://YOUR-DOMAIN.com/
+   https://YOUR-DOMAIN.com/robots.txt
+   https://YOUR-DOMAIN.com/sitemap.xml
+3. Confirm the canonical tag points to the exact preferred homepage URL.
+4. Use one canonical domain consistently (www or non-www) and redirect the other version to it at hosting level.
+5. Do not block the page with robots.txt or add a noindex meta tag.
+
+C. GOOGLE SEARCH CONSOLE
+1. Open Google Search Console and add a Domain property for your domain.
+2. Verify ownership using the DNS TXT record Google supplies.
+3. Submit https://YOUR-DOMAIN.com/sitemap.xml in the Sitemaps report.
+4. Open URL Inspection and inspect the homepage URL.
+5. Run Test Live URL. Resolve accessibility, redirect, canonical or indexing-blocking issues if reported.
+6. Select Request Indexing if the page is eligible.
+7. Review Page Indexing and Sitemaps reports over the following days/weeks. Google does not guarantee indexing or a particular timeline.
+8. After Google processes the page, check Search results performance to see actual queries, impressions, clicks and positions.
+
+D. STRUCTURED DATA
+The page includes JSON-LD Organization, WebSite and ProfessionalService data. Replace the placeholder domain before publishing. Keep every field accurate. Structured data makes information easier for search engines to interpret but does not guarantee a rich result or higher rank. Validate with Google's Rich Results Test and Schema.org Validator; not every Schema.org type is eligible for a Google rich result.
+
+E. SEO CONTENT & GROWTH
+- Keep this homepage focused on the overall service offering and conversion to a genuine inquiry.
+- When you have enough distinct, useful content, create separate pages for major services (for example, Android game development, app development, Play Console setup guidance, and publishing support). Do not publish thin pages that merely repeat keywords.
+- Add real portfolio examples, screenshots, project descriptions, and case studies where you have permission to share them.
+- Publish helpful articles that answer real developer questions. Avoid mass-generated or duplicated content.
+- Earn relevant links through legitimate partnerships, portfolio listings and useful resources; do not buy spam links.
+- Do not create fake reviews, fake business addresses, or misleading claims about Google affiliation or approval guarantees.
+- Track mobile performance and accessibility. Use PageSpeed Insights and Search Console's Core Web Vitals report when data is available.
+- Use Search Console's URL Inspection and Page Indexing reports rather than repeatedly resubmitting the same URL.
+
+F. IMPORTANT LIMITATIONS
+SEO cannot guarantee indexing, rankings, leads or revenue. Search Console submission is a discovery/request mechanism, not an approval process. Google's systems choose what to crawl, index and rank.

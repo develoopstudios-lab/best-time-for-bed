@@ -1,45 +1,254 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Best Time for Bed - Sleep Calculator Demo</title>
+  <meta name="theme-color" content="#071b45">
+  <title>Google Play Console Support & Android Game Development | Develoop Studios</title>
+  <meta name="description" content="Develoop Studios helps developers and businesses with Google Play Console setup guidance, Android game and app development, publishing workflows, verification troubleshooting and technical support.">
+  <meta name="robots" content="index,follow,max-image-preview:large">
+  <!-- Replace YOUR-DOMAIN.com in canonical, Open Graph, schema and sitemap.xml before publishing. -->
+  <link rel="canonical" href="https://YOUR-DOMAIN.com/">
+  <link rel="icon" href="/favicon.ico">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:site_name" content="Develoop Studios">
+  <meta property="og:title" content="Google Play Console Support & Android Game Development | Develoop Studios">
+  <meta property="og:description" content="Practical support for Android game and app development, Play Console setup guidance, publishing workflows and technical troubleshooting.">
+  <meta property="og:url" content="https://YOUR-DOMAIN.com/">
+  <meta property="og:image" content="https://YOUR-DOMAIN.com/assets/develoop-studios-social.jpg">
+  <meta property="og:image:alt" content="Develoop Studios — Android game development and Google Play publishing support">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Google Play Console Support & Android Game Development | Develoop Studios">
+  <meta name="twitter:description" content="Android game and app development, publishing guidance and technical support.">
+  <meta name="twitter:image" content="https://YOUR-DOMAIN.com/assets/develoop-studios-social.jpg">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://YOUR-DOMAIN.com/#organization",
+        "name": "Develoop Studios",
+        "url": "https://YOUR-DOMAIN.com/",
+        "telephone": ["+923058115088", "+923058071088"],
+        "description": "Independent provider of mobile game and app development, Google Play Console setup guidance, publishing assistance and technical support."
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://YOUR-DOMAIN.com/#website",
+        "url": "https://YOUR-DOMAIN.com/",
+        "name": "Develoop Studios",
+        "publisher": {"@id": "https://YOUR-DOMAIN.com/#organization"},
+        "inLanguage": "en"
+      },
+      {
+        "@type": "ProfessionalService",
+        "@id": "https://YOUR-DOMAIN.com/#service",
+        "name": "Develoop Studios",
+        "url": "https://YOUR-DOMAIN.com/",
+        "provider": {"@id": "https://YOUR-DOMAIN.com/#organization"},
+        "description": "Mobile game and app development, Google Play Console setup guidance, publishing assistance, verification troubleshooting and ongoing technical support.",
+        "areaServed": [
+          {"@type": "Country", "name": "Pakistan"},
+          {"@type": "Place", "name": "International"}
+        ],
+        "availableLanguage": ["English", "Urdu"],
+        "serviceType": [
+          "Android game development",
+          "Android app development",
+          "Google Play Console setup guidance",
+          "Google Play publishing assistance",
+          "Account verification troubleshooting",
+          "Technical support"
+        ]
+      }
+    ]
+  }
+  </script>
   <style>
-    body { font-family: system-ui, sans-serif; max-width: 480px; margin: 40px auto; padding: 0 16px; color: #1c2541; }
-    label { display: block; margin: 16px 0 6px; font-weight: 600; }
-    input, button { font-size: 1rem; padding: 8px 12px; }
-    ul { padding-left: 20px; }
-    a { color: #3a506b; }
+    :root{--navy:#071b45;--blue:#0b55b7;--green:#08a879;--yellow:#ffda3e;--ink:#122348;--muted:#586780;--paper:#f5f8ff;--line:#e1e8f4;--white:#fff;--shadow:0 18px 48px rgba(9,32,76,.13)}
+    *{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:85px}body{margin:0;font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:var(--ink);line-height:1.65;background:white}a{color:inherit;text-decoration:none}.container{width:min(1140px,92%);margin:auto}
+    header{position:sticky;top:0;z-index:10;background:rgba(7,27,69,.97);color:white;border-bottom:1px solid #ffffff20;backdrop-filter:blur(12px)}.nav{min-height:74px;display:flex;align-items:center;justify-content:space-between;gap:20px}.brand{display:flex;align-items:center;gap:10px;font-weight:850;letter-spacing:-.3px}.brand-mark{width:42px;height:42px;display:grid;place-items:center;border-radius:13px;background:linear-gradient(145deg,var(--yellow),#ff9c28);color:var(--navy);font-size:22px}.brand small{display:block;color:#b9c9e8;font-size:10px;letter-spacing:1.4px;text-transform:uppercase}.navlinks{display:flex;gap:23px;align-items:center;font-size:14px;color:#e1eafa}.navlinks a:hover{color:var(--yellow)}.navcta,.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:12px 18px;border-radius:99px;font-weight:800;transition:.2s}.navcta,.primary{background:var(--yellow);color:var(--navy)}.btn:hover,.navcta:hover{transform:translateY(-2px)}.menu{display:none;background:none;color:white;border:0;font-size:27px}
+    .hero{background:radial-gradient(circle at 86% 22%,#1765c8 0,transparent 30%),linear-gradient(130deg,#061638,#082e71 62%,#075b99);color:white;overflow:hidden;padding:78px 0 76px}.hero-grid{display:grid;grid-template-columns:1.08fr .92fr;align-items:center;gap:42px}.eyebrow{display:inline-flex;gap:8px;align-items:center;border:1px solid #ffffff42;background:#ffffff12;padding:7px 13px;border-radius:99px;font-size:12px;font-weight:800;letter-spacing:1px;text-transform:uppercase}.hero h1{font-size:clamp(38px,5vw,62px);line-height:1.08;letter-spacing:-2px;margin:22px 0}.hero h1 span{color:var(--yellow)}.hero p{font-size:18px;color:#dce8ff;max-width:630px}.actions{display:flex;gap:12px;flex-wrap:wrap;margin:27px 0}.secondary{border:1px solid #ffffff66;color:white;background:#ffffff0d}.points{display:flex;gap:17px;flex-wrap:wrap;color:#dce8ff;font-size:13px}.points b{color:#61e5b8}.visual{min-height:340px;display:grid;place-items:center;position:relative}.phone{width:270px;padding:11px;border-radius:35px;background:linear-gradient(145deg,#e4eeff,#526b92 45%,#07142b);box-shadow:0 25px 60px #0007;transform:rotate(4deg);z-index:1}.screen{min-height:350px;border-radius:26px;background:linear-gradient(150deg,#fff,#eaf2ff);color:var(--navy);padding:25px 18px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center}.play{width:70px;height:70px;border-radius:20px;background:white;display:grid;place-items:center;box-shadow:0 8px 22px #173d7820;margin-bottom:17px}.play svg{width:44px;height:44px}.screen h2{font-size:24px;line-height:1.2;margin:5px 0}.screen p{font-size:13px;color:#596986;margin:8px 0 18px}.pill{border-radius:99px;background:#e0f8ed;color:#06754f;padding:7px 13px;font-weight:800;font-size:12px}.float{position:absolute;z-index:2;background:white;color:var(--ink);box-shadow:var(--shadow);border-radius:15px;padding:13px 16px;font-weight:800}.float small{display:block;color:var(--muted);font-weight:600;font-size:11px}.f1{left:0;top:35px}.f2{right:0;bottom:24px}
+    .trust{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;padding:21px 24px;margin-top:-22px;background:white;position:relative;border-radius:17px;box-shadow:0 8px 28px #071b4510}.trust div{display:flex;align-items:center;justify-content:center;gap:10px;font-size:14px;font-weight:800}.trust span{font-size:24px}
+    section{padding:78px 0}.sectionhead{text-align:center;max-width:760px;margin:0 auto 38px}.kicker{color:#078c70;font-size:12px;font-weight:900;text-transform:uppercase;letter-spacing:1.7px}.sectionhead h2,.about h2,.contact h2{font-size:clamp(30px,4vw,43px);line-height:1.17;letter-spacing:-1.3px;margin:10px 0 13px}.sectionhead p,.muted{color:var(--muted)}.services,.process{background:var(--paper)}.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:17px}.card{padding:24px;border:1px solid var(--line);border-radius:18px;background:white;transition:.2s}.card:hover{transform:translateY(-4px);box-shadow:var(--shadow);border-color:#bad5ff}.ico{width:51px;height:51px;display:grid;place-items:center;background:#e8f2ff;border-radius:15px;font-size:25px;margin-bottom:16px}.card h3{font-size:18px;line-height:1.35;margin:0 0 8px}.card p{color:var(--muted);font-size:14px;margin:0}.tag{display:inline-block;margin-top:14px;padding:5px 9px;border-radius:99px;background:#e5faf3;color:#087a61;font-size:10px;font-weight:850;letter-spacing:.4px}
+    .aboutgrid{display:grid;grid-template-columns:.85fr 1.15fr;gap:48px;align-items:center}.panel{background:linear-gradient(145deg,#09275d,#0b5bb1);color:white;border-radius:23px;padding:31px}.panel h3{font-size:27px;line-height:1.2;margin:16px 0 10px}.panel p{color:#d8e7ff}.panel .exp{border-top:1px solid #ffffff30;margin-top:22px;padding-top:18px;display:flex;align-items:center;gap:13px}.exp strong{font-size:30px;color:var(--yellow)}.exp span{font-size:13px;color:#d8e7ff}.about>p{color:var(--muted)}.checks{list-style:none;padding:0;display:grid;gap:12px;margin:23px 0}.checks li{display:flex;gap:10px}.check{width:22px;height:22px;flex:0 0 22px;border-radius:50%;background:#dff8ee;color:#07815d;display:grid;place-items:center;font-size:13px;font-weight:900;margin-top:2px}
+    .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:15px}.step{padding:22px;background:white;border:1px solid var(--line);border-radius:17px}.num{width:36px;height:36px;border-radius:11px;display:grid;place-items:center;background:var(--navy);color:var(--yellow);font-weight:900;margin-bottom:14px}.step h3{margin:0 0 6px;font-size:17px}.step p{font-size:14px;color:var(--muted);margin:0}
+    .faq{max-width:850px;margin:auto;display:grid;gap:11px}.faq details{border:1px solid var(--line);border-radius:14px;padding:17px 19px}.faq summary{font-weight:800;cursor:pointer}.faq details p{color:var(--muted);font-size:14px;margin:10px 0 0}
+    .contact{background:linear-gradient(130deg,#061638,#0a3c86);color:white}.contactgrid{display:grid;grid-template-columns:1fr .85fr;gap:42px;align-items:center}.contact p{color:#d6e4ff}.contactbox{background:white;color:var(--ink);padding:26px;border-radius:21px}.contactbox>p{color:var(--muted);font-size:14px}.number{display:flex;align-items:center;gap:12px;border:1px solid var(--line);border-radius:13px;padding:13px;margin-top:11px;font-weight:850}.wa{width:39px;height:39px;display:grid;place-items:center;background:#dff9ec;color:#078858;border-radius:50%;font-size:21px}.number small{display:block;color:var(--muted);font-size:11px;font-weight:600}.number strong{font-size:16px}.contactbox .btn{width:100%;margin-top:17px;background:#08a66d;color:white}.smallnote{font-size:12px;color:#b7c9e8!important}
+    footer{background:#04112d;color:#c5d3ec;padding:26px 0;font-size:12px}.footrow{display:flex;justify-content:space-between;align-items:center;gap:18px;flex-wrap:wrap}.footlinks{display:flex;gap:16px;flex-wrap:wrap}.disclaimer{max-width:920px;color:#8799b9;font-size:11px;margin:14px 0 0}
+    @media(max-width:900px){.hero-grid,.aboutgrid,.contactgrid{grid-template-columns:1fr}.visual{min-height:365px}.grid{grid-template-columns:repeat(2,1fr)}.steps{grid-template-columns:repeat(2,1fr)}.trust{grid-template-columns:repeat(2,1fr)}}
+    @media(max-width:620px){.nav{min-height:65px}.menu{display:block}.navlinks{display:none;position:absolute;left:0;right:0;top:65px;background:var(--navy);padding:18px 5%;flex-direction:column;align-items:stretch;gap:15px}.navlinks.open{display:flex}.navcta{display:none}.brand{font-size:13px}.brand-mark{width:37px;height:37px}.hero{padding:50px 0}.hero h1{letter-spacing:-1.4px}.hero p{font-size:16px}.visual{min-height:330px}.phone{width:225px}.screen{min-height:295px}.float{font-size:12px;padding:10px 12px}.f1{left:-2px;top:25px}.f2{right:-2px;bottom:18px}section{padding:60px 0}.grid,.steps{grid-template-columns:1fr}.trust{padding:17px 12px;gap:16px}.trust div{font-size:12px;justify-content:flex-start}.trust span{font-size:21px}.panel,.contactbox{padding:22px}.number strong{font-size:14px}.footrow{align-items:flex-start;flex-direction:column}}
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{transition:none!important}}
+
+    /* Reference-inspired visual refresh: bold blue hero, two-column service directory, green/yellow accents */
+    :root{--navy:#062b68;--blue:#0759bf;--green:#079b72;--yellow:#ffdc28;--ink:#071e61;--paper:#f7fbff;--line:#d7eaff;--shadow:0 16px 38px rgba(0,37,104,.14)}
+    body{font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:#fff;color:#081e62}
+    header{background:#052b67}
+    .hero{padding:48px 0 55px;background:radial-gradient(circle at 70% 15%,#1477d5 0,transparent 30%),linear-gradient(135deg,#063c88,#0053b6 56%,#052a67);position:relative}
+    .hero:after{content:"";position:absolute;left:0;right:0;bottom:-1px;height:28px;background:#fff;clip-path:polygon(0 50%,10% 25%,23% 42%,39% 22%,54% 40%,71% 18%,85% 38%,100% 0,100% 100%,0 100%)}
+    .hero h1{font-size:clamp(38px,5.2vw,66px);letter-spacing:-1.8px;font-weight:900}
+    .hero h1 span{color:#ffdf28;text-shadow:0 2px 0 #d7a800}
+    .eyebrow{border:0;border-radius:5px;background:transparent;padding:0;color:#fff;font-size:15px;letter-spacing:.2px;text-transform:none;font-style:italic}
+    .primary,.navcta{background:#ffdc28;color:#071e61}
+    .visual{min-height:365px}
+    .float{border-radius:12px;border:1px solid #d7eaff}
+    .trust{box-shadow:none;border:1px solid #d6e8ff;border-radius:0;margin-top:0;padding:18px 15px;background:#062b68;color:white}
+    .trust div{color:white}
+    section{padding:60px 0}
+    .services{background:linear-gradient(#fff,#f8fcff)}
+    .services .sectionhead{text-align:left;max-width:none;margin:0 0 22px}
+    .services .sectionhead .kicker{display:inline-block;background:#079b72;color:#fff;padding:8px 22px;border-radius:6px;font-size:25px;letter-spacing:0;text-transform:none;box-shadow:5px 4px 0 #d6f4e9}
+    .services .sectionhead h2{font-size:clamp(27px,3.5vw,39px);margin:18px 0 8px;color:#071e61}
+    .services .sectionhead p{max-width:800px;margin:0;color:#253b76}
+    .services .grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:0 28px}
+    .services .card{display:grid;grid-template-columns:92px minmax(0,1fr);align-items:start;column-gap:20px;padding:19px 6px;border:0;border-bottom:1px solid #d7eaff;border-radius:0;background:transparent;box-shadow:none;transform:none;min-height:130px}
+    .services .card:hover{background:#f5fbff;box-shadow:none;border-color:#b7d9ff}
+    .services .ico{grid-row:1 / span 3;width:92px;height:92px;border-radius:19px;font-size:36px;margin:0;background:linear-gradient(145deg,#e8f5ff,#d6eaff);border:1px solid #c4e5ff}
+    .services .card:nth-child(3n+2) .ico{background:linear-gradient(145deg,#f5eaff,#e5d8ff);border-color:#e0ccff}
+    .services .card:nth-child(3n) .ico{background:linear-gradient(145deg,#e3fbf3,#c9f2e5);border-color:#b9eadb}
+    .services .card h3{font-size:19px;line-height:1.28;margin:1px 0 6px;color:#071e61}
+    .services .card p{font-size:15px;line-height:1.5;color:#162b66}
+    .services .tag{display:none}
+    .aboutgrid{gap:34px}
+    .panel{background:linear-gradient(145deg,#062b68,#0870c8);border-radius:18px}
+    .process{background:#f1f7ff}
+    .contact{background:linear-gradient(135deg,#06285f 0%,#0755a2 58%,#087f91 100%);color:#fff}
+    .contactbox{border:1px solid #bfe6d9;box-shadow:0 15px 35px rgba(0,20,60,.22)}
+.contact .eyebrow{color:#ffe45c}
+.contact h2{color:#fff;text-shadow:0 2px 12px rgba(0,0,0,.18)}
+.contactgrid>div:first-child>p{color:#eef6ff;max-width:56ch;font-size:17px;line-height:1.75}
+.contact .points{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
+.contact .points span{display:inline-flex;align-items:center;gap:8px;padding:10px 13px;border:1px solid rgba(255,255,255,.3);border-radius:999px;background:rgba(255,255,255,.10);color:#fff;font-weight:750}
+.contact .points b{display:grid;place-items:center;width:22px;height:22px;border-radius:50%;background:#ffe45c;color:#07316c}
+    .contactbox .btn{background:#079b72;color:#fff}
+    footer{background:#052b67;color:#fff}
+    .footrow{border-bottom-color:#ffffff30}
+    .disclaimer{color:#d6e5ff}
+    @media(max-width:760px){
+      .hero{padding:40px 0 48px}.hero-grid{grid-template-columns:1fr;gap:20px}.hero h1{font-size:clamp(36px,10vw,52px)}.visual{min-height:300px}.phone{width:220px}.screen{min-height:285px}.f1{left:2%;top:14px}.f2{right:1%;bottom:8px}.trust{grid-template-columns:repeat(2,1fr);gap:15px}.services .grid{grid-template-columns:1fr}.services .card{grid-template-columns:74px minmax(0,1fr);column-gap:14px;min-height:0;padding:17px 0}.services .ico{width:74px;height:74px;font-size:29px;border-radius:15px}.services .card h3{font-size:17px}.services .card p{font-size:14px}.services .sectionhead .kicker{font-size:21px}.aboutgrid{grid-template-columns:1fr}.steps{grid-template-columns:repeat(2,1fr)}
+    }
+    @media(max-width:420px){.services .card{grid-template-columns:62px minmax(0,1fr);gap:12px}.services .ico{width:62px;height:62px;font-size:25px}.steps{grid-template-columns:1fr}.points{gap:10px}}
+  
+    .theme-toggle{display:inline-flex;align-items:center;gap:8px;border:1px solid rgba(255,255,255,.32);border-radius:999px;padding:9px 13px;background:rgba(255,255,255,.10);color:inherit;font:inherit;font-weight:750;cursor:pointer;white-space:nowrap}
+    .theme-toggle:hover{background:rgba(255,255,255,.18)}
+    .theme-toggle:focus-visible{outline:3px solid #ffd83d;outline-offset:3px}
+    body[data-theme="dark"]{--paper:#101b2d;--white:#15233a;--ink:#edf4ff;--muted:#b8c7dc;--line:#30425d;--shadow:0 14px 40px rgba(0,0,0,.28);background:#0b1423;color:var(--ink)}
+    body[data-theme="dark"] .services,body[data-theme="dark"] .process{background:#101b2d}
+    body[data-theme="dark"] .card,body[data-theme="dark"] .panel,body[data-theme="dark"] .faq details{background:#15233a;color:#edf4ff;border-color:#30425d}
+    body[data-theme="dark"] .card p,body[data-theme="dark"] .muted,body[data-theme="dark"] .sectionhead p,body[data-theme="dark"] .about p,body[data-theme="dark"] .faq details p{color:#b8c7dc}
+    body[data-theme="dark"] .about{color:#edf4ff}
+    body[data-theme="dark"] .contact{background:linear-gradient(135deg,#04132f 0%,#082b59 58%,#06464e 100%)}
+    body[data-theme="dark"] .contactbox{background:#15233a;color:#edf4ff;border-color:#30425d}
+    body[data-theme="dark"] .contactbox>p,body[data-theme="dark"] .number small{color:#b8c7dc}
+    body[data-theme="dark"] .number{border-color:#30425d;background:#101b2d;color:#edf4ff}
+    body[data-theme="dark"] footer{background:#050d1b}
+    @media(max-width:620px){.theme-toggle{padding:8px 10px;font-size:12px}.theme-toggle .theme-label{display:none}}
+
   </style>
 </head>
 <body>
-  <h1>Best Time for Bed</h1>
-  <p>Simple demo of the sleep calculator. Full version: <a href="https://www.besttimeforbed.com/">besttimeforbed.com</a></p>
+<header>
+  <div class="container nav">
+    <a class="brand" href="#home" aria-label="Develoop Studios home"><span class="brand-mark">▶</span><span>DEVELOOP STUDIOS<small>Games · Apps · Publishing Support</small></span></a>
+    <button class="menu" id="menuBtn" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+    <button class="theme-toggle" id="themeToggle" type="button" aria-label="Switch to dark theme" aria-pressed="false"><span id="themeIcon" aria-hidden="true">🌙</span><span class="theme-label" id="themeLabel">Dark mode</span></button>
+    <nav class="navlinks" id="navLinks" aria-label="Main navigation"><a href="#services">Services</a><a href="#about">About</a><a href="#process">How It Works</a><a href="#faq">FAQs</a><a href="#contact">Contact</a></nav>
+    <a class="navcta" href="#contact">Discuss Your Project ↗</a>
+  </div>
+</header>
+<main>
+<section class="hero" id="home">
+  <div class="container hero-grid">
+    <div>
+      <div class="eyebrow">Mobile development & publishing support</div>
+      <h1>Build Your Game. Prepare Your App for <span>Google Play.</span></h1>
+      <p>Develoop Studios provides mobile game and app development alongside practical guidance for Google Play Console setup, organization account requirements, publishing workflows and technical troubleshooting.</p>
+      <div class="actions"><a class="btn primary" href="#contact">💬 Contact Develoop Studios</a><a class="btn secondary" href="#services">Explore Services ↓</a></div>
+      <div class="points"><span><b>✓</b> Clear guidance</span><span><b>✓</b> Developer-focused support</span><span><b>✓</b> Pakistan & international clients</span></div>
+    </div>
+    <div class="visual" aria-label="Illustration representing Android app publishing">
+      <div class="float f1">🛠️ Setup & Support<small>Guidance for your workflow</small></div>
+      <div class="phone"><div class="screen"><div class="play"><svg viewBox="0 0 48 48" aria-hidden="true"><path fill="#34A853" d="M8 4 28 24 8 44c-1.4-.7-2-2-2-4V8c0-2 1-3.4 2-4Z"/><path fill="#4285F4" d="m8 4 25 14-5 6L8 4Z"/><path fill="#FBBC04" d="m28 24 8-5 6 3c2 1 2 3 0 4l-6 3-8-5Z"/><path fill="#EA4335" d="m8 44 25-14-5-6L8 44Z"/></svg></div><h2>Your App Idea<br>Starts Here</h2><p>Develop · Prepare · Publish</p><span class="pill">LET'S PLAN YOUR PROJECT</span></div></div>
+      <div class="float f2">🎮 Games & Apps<small>Build · Publish · Improve</small></div>
+    </div>
+  </div>
+</section>
+<div class="container trust" aria-label="Service highlights"><div><span>🎮</span><div>Mobile Game<br>Development</div></div><div><span>📱</span><div>Android App<br>Development</div></div><div><span>🔧</span><div>Publishing<br>Troubleshooting</div></div><div><span>🤝</span><div>Technical<br>Support</div></div></div>
+<section class="services" id="services">
+  <div class="container">
+    <div class="sectionhead"><div class="kicker">Services</div><h2>Google Play Console, Game & App Services</h2><p>Practical help for independent developers, studios and businesses preparing to build or publish Android apps and games.</p></div>
+    <div class="grid">
+      <article class="card"><div class="ico">🧾</div><h3>Google Play Console Setup Guidance</h3><p>Understand registration steps, account requirements and the information to prepare before creating a developer account.</p><span class="tag">ACCOUNT SETUP</span></article>
+      <article class="card"><div class="ico">🏢</div><h3>Organization Account Preparation</h3><p>Guidance on organization-account requirements and preparing accurate company details and supporting documentation.</p><span class="tag">ORGANIZATION ACCOUNTS</span></article>
+      <article class="card"><div class="ico">🎮</div><h3>Mobile Game Development</h3><p>Development support for Android mobile games, with project goals, device constraints and publishing needs considered.</p><span class="tag">GAME DEVELOPMENT</span></article>
+      <article class="card"><div class="ico">📲</div><h3>Android App Development</h3><p>Discuss app requirements, implementation needs and preparation for an Android release.</p><span class="tag">APP DEVELOPMENT</span></article>
+      <article class="card"><div class="ico">🔍</div><h3>Verification Troubleshooting</h3><p>Help interpret visible verification instructions, review submitted details and identify appropriate next steps when a process is delayed.</p><span class="tag">VERIFICATION GUIDANCE</span></article>
+      <article class="card"><div class="ico">🗂️</div><h3>D‑U‑N‑S Lookup & Application Guidance</h3><p>Help locate official D‑U‑N‑S resources and understand the process for associating a valid identifier with the correct business.</p><span class="tag">BUSINESS DOCUMENTATION</span></article>
+      <article class="card"><div class="ico">🚀</div><h3>Google Play Publishing Assistance</h3><p>Guidance with release preparation, store listing details, testing steps and common publishing workflow questions.</p><span class="tag">PUBLISHING WORKFLOW</span></article>
+      <article class="card"><div class="ico">🧰</div><h3>Play Console Technical Support</h3><p>Investigate workflow and technical issues, understand platform messages and plan a reasonable troubleshooting path.</p><span class="tag">TECHNICAL SUPPORT</span></article>
+      <article class="card"><div class="ico">🔁</div><h3>Ongoing Developer Assistance</h3><p>Continued support for app updates, release questions and technical needs based on an agreed scope of work.</p><span class="tag">ONGOING SUPPORT</span></article>
+    </div>
+  </div>
+</section>
+<section id="about">
+  <div class="container aboutgrid">
+    <div class="panel"><div class="eyebrow">About Develoop Studios</div><h3>One practical point of contact for your mobile project.</h3><p>Get clear explanations, organized next steps and development or publishing support based on your project requirements.</p><div class="exp"><strong>7–10</strong><span>years of mobile gaming field experience, as provided by the service owner</span></div></div>
+    <div class="about"><div class="kicker">Why work with us</div><h2>Make your development and publishing process clearer.</h2><p>From a new Android game to a developer-account question, Develoop Studios helps you understand the work involved and choose practical next steps.</p><ul class="checks"><li><span class="check">✓</span><span><b>Project-specific discussion</b><br>Explain your goal or the issue you are facing before agreeing on a service.</span></li><li><span class="check">✓</span><span><b>Developer-focused approach</b><br>Consider technical setup, app readiness and publishing requirements together.</span></li><li><span class="check">✓</span><span><b>Transparent scope</b><br>Confirm deliverables, timeline and price before work begins.</span></li><li><span class="check">✓</span><span><b>Honest expectations</b><br>Platform decisions remain with Google; no approval or ranking outcome is guaranteed.</span></li></ul><a class="btn" style="background:var(--navy);color:white" href="#contact">Discuss Your Requirements ↗</a></div>
+  </div>
+</section>
+<section class="process" id="process"><div class="container"><div class="sectionhead"><div class="kicker">How it works</div><h2>A Clear, Four-Step Process</h2><p>Start with a conversation so the proposed work fits your actual needs.</p></div><div class="steps"><article class="step"><div class="num">01</div><h3>Describe Your Goal</h3><p>Tell us about the app, game, account setup or publishing issue.</p></article><article class="step"><div class="num">02</div><h3>Review Requirements</h3><p>Identify relevant steps, information, constraints and possible options.</p></article><article class="step"><div class="num">03</div><h3>Agree on Scope</h3><p>Confirm deliverables, schedule and price before work starts.</p></article><article class="step"><div class="num">04</div><h3>Work Through It</h3><p>Receive practical assistance and updates on the agreed tasks.</p></article></div></div></section>
+<section id="faq"><div class="container"><div class="sectionhead"><div class="kicker">FAQs</div><h2>Common Questions</h2><p>Important information about Google Play Console and publishing support.</p></div><div class="faq">
+  <details><summary>Can Develoop Studios guarantee Google Play Console approval?</summary><p>No. Google controls account verification, developer-account decisions and app publishing reviews. We can help explain requirements and troubleshoot legitimate issues, but approval cannot be guaranteed.</p></details>
+  <details><summary>Can you help with a delayed verification process?</summary><p>We can help you review visible status messages and instructions, check that submitted details are consistent, and identify appropriate next steps. Processing times and outcomes depend on Google.</p></details>
+  <details><summary>Do you help with organization developer accounts?</summary><p>Yes. We can provide guidance on published organization-account requirements and help you prepare accurate business information and supporting documents. The account must belong to the real organization.</p></details>
+  <details><summary>Can you help me obtain a D‑U‑N‑S Number?</summary><p>We can help you find official D‑U‑N‑S lookup or application resources and understand the steps. Any identifier used should be valid and associated with the correct business.</p></details>
+  <details><summary>What information should I send when contacting you?</summary><p>Describe your goal, the type of app or account, and the stage where you need help. Do not send passwords, one-time verification codes, payment details or other sensitive credentials.</p></details>
+  <details><summary>Do you work with clients outside Pakistan?</summary><p>Yes, inquiries from Pakistan and international clients are welcome. Availability, scope, communication and payment terms should be confirmed before work begins.</p></details>
+</div></div></section>
+<section class="contact" id="contact"><div class="container contactgrid"><div><div class="eyebrow">Start a conversation</div><h2>Let's discuss your game, app or Play Console question.</h2><p>Send a short message about your requirements. We can discuss suitable support options, scope and next steps.</p><div class="points"><span><b>✓</b> Development</span><span><b>✓</b> Publishing guidance</span><span><b>✓</b> Technical support</span></div></div><div class="contactbox"><h3>Contact Develoop Studios</h3><p>Use either number to start a WhatsApp conversation.</p>
+  <a class="number" href="https://wa.me/923058115088" target="_blank" rel="noopener noreferrer"><span class="wa">✆</span><span><small>WhatsApp / Call / Text</small><strong>0305 8115088</strong></span><span style="margin-left:auto">↗</span></a>
+  <a class="number" href="https://wa.me/923058071088" target="_blank" rel="noopener noreferrer"><span class="wa">✆</span><span><small>WhatsApp / Call / Text</small><strong>0305 8071088</strong></span><span style="margin-left:auto">↗</span></a>
+  <a class="btn" href="https://wa.me/923058115088?text=Hello%20Develoop%20Studios%2C%20I%20would%20like%20to%20discuss%20game%2Fapp%20development%20or%20Google%20Play%20Console%20support." target="_blank" rel="noopener noreferrer">Message on WhatsApp ↗</a>
+  <p style="font-size:12px;color:#6a7890">For your security, never share passwords or one-time verification codes.</p></div></div></section>
+</main>
+<footer><div class="container"><div class="footrow"><a class="brand" href="#home"><span class="brand-mark">▶</span><span>DEVELOOP STUDIOS<small>Games · Apps · Support</small></span></a><div class="footlinks"><a href="#services">Services</a><a href="#about">About</a><a href="#faq">FAQs</a><a href="#contact">Contact</a></div><span>© <span id="year"></span> Develoop Studios</span></div><p class="disclaimer">Develoop Studios is an independent service provider and is not affiliated with, endorsed by, or an official representative of Google or Google Play. Google controls developer-account verification, approval and app review decisions. Service outcomes and processing timelines are not guaranteed. Use accurate business details and authorized accounts only.</p></div></footer>
+<script>
+const menuBtn=document.getElementById('menuBtn');
+const navLinks=document.getElementById('navLinks');
+menuBtn.addEventListener('click',()=>{const open=navLinks.classList.toggle('open');menuBtn.setAttribute('aria-expanded',String(open));menuBtn.textContent=open?'×':'☰';});
+navLinks.querySelectorAll('a').forEach(link=>link.addEventListener('click',()=>{navLinks.classList.remove('open');menuBtn.setAttribute('aria-expanded','false');menuBtn.textContent='☰';}));
+document.getElementById('year').textContent=new Date().getFullYear();
+</script>
 
-  <label for="wake">I need to wake up at:</label>
-  <input id="wake" type="time" value="07:00">
-  <button id="calc-bed">Find bedtimes</button>
+<script>
+(function(){
+  const button = document.getElementById('themeToggle');
+  const icon = document.getElementById('themeIcon');
+  const label = document.getElementById('themeLabel');
+  if (!button) return;
+  function applyTheme(theme){
+    document.body.setAttribute('data-theme', theme);
+    const dark = theme === 'dark';
+    button.setAttribute('aria-pressed', String(dark));
+    button.setAttribute('aria-label', dark ? 'Switch to light theme' : 'Switch to dark theme');
+    if(icon) icon.textContent = dark ? '☀️' : '🌙';
+    if(label) label.textContent = dark ? 'Light mode' : 'Dark mode';
+    const meta = document.querySelector('meta[name="theme-color"]');
+    if(meta) meta.setAttribute('content', dark ? '#07101f' : '#071b45');
+  }
+  let saved = 'light';
+  try { saved = localStorage.getItem('develoop-theme') || 'light'; } catch(e) {}
+  applyTheme(saved);
+  button.addEventListener('click', function(){
+    const next = document.body.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+    applyTheme(next);
+    try { localStorage.setItem('develoop-theme', next); } catch(e) {}
+  });
+})();
+</script>
 
-  <label for="bed">I am going to bed at:</label>
-  <input id="bed" type="time" value="23:00">
-  <button id="calc-wake">Find wake-up times</button>
-
-  <ul id="results"></ul>
-
-  <script src="sleep-calculator.js"></script>
-  <script>
-    var results = document.getElementById("results");
-    function show(items) {
-      results.innerHTML = items.map(function (i) {
-        return "<li><strong>" + i.time + "</strong> (" + i.cycles + " cycles, " + i.hoursOfSleep + " hours of sleep)</li>";
-      }).join("");
-    }
-    document.getElementById("calc-bed").onclick = function () {
-      show(SleepCalculator.bedtimesForWakeUp(document.getElementById("wake").value));
-    };
-    document.getElementById("calc-wake").onclick = function () {
-      show(SleepCalculator.wakeTimesForBedtime(document.getElementById("bed").value));
-    };
-  </script>
 </body>
 </html>
